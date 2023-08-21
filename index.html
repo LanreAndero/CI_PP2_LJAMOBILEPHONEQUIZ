@@ -4,8 +4,51 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>LJA Mobile Phone Quiz</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
+<header>
+    <h1>LJA Mobile Phone Quiz</h1>
+</header>
+
+<!--start of main-->
+<main>
+    <div id="question-container">
+        <p id="question-text"></p>
+        <div id="answer-options">
+            <label>
+                <input type="radio" class="answer-button" name="answer" value="a">
+                <span id="option-a"></span>
+            </label>
+            <label>
+                <input type="radio" class="answer-button" name="answer" value="b">
+                <span id="option-b"></span>
+            </label>
+            <label>
+                <input type="radio" class="answer-button" name="answer" value="c">
+                <span id="option-c"></span>
+            </label>
+            <label>
+                <input type="radio" class="answer-button" name="answer" value="d">
+                <span id="option-d"></span>
+            </label>
+        </div>
+        <div id="navigation-buttons">
+            <button id="prev-button">Previous</button>
+            <button id="next-button">Next</button>
+            <button id="reset-button">Reset</button>
+        </div>
+        <button id="submit-button">Submit</button>
+    </div>
+    <div id="feedback-container"></div>
+    <div id="final-result"></div>
+    <div class="main-img-container">
+        <img src="/assets/images/quiz-banner.png" alt="pic" id="main-img">
+    </div>
+</main>
+<!--end of main-->
+
 <body>
     
 </body>
