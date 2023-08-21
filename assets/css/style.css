@@ -53,3 +53,49 @@ main {
     border: 1px solid #ddd;
     color: green;
 }
+
+#navigation-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+#prev-button,
+#next-button {
+    background-color: #333;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#prev-button:hover,
+#next-button:hover {
+    background-color: #555;
+}
+
+#prev-button:disabled,
+#next-button:disabled {
+    background-color: #999;
+    cursor: not-allowed;
+}
+
+#reset-button {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#reset-button:hover {
+    background-color: #d32f2f;
+}
