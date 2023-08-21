@@ -6,3 +6,50 @@ body {
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+header {
+    background-color: #e40f0f;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+#question-container {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    background-color: #feedba;
+}
+
+#answer-options label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+.answer-button:focus {
+    outline: none;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.3);
+}
+
+#submit-button {
+    background-color: #2f16d1;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#submit-button:hover {
+    background-color: #0d011a;
+}
+
+#feedback-container {
+    margin-top: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    color: green;
+}
