@@ -48,7 +48,7 @@ main {
 }
 
 #feedback-container {
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: 1rem;
     border: 1px solid #ddd;
     color: green;
@@ -102,6 +102,7 @@ main {
 
 .main-img-container {
     text-align: center;
+    margin-top: 1rem;
 }
 
 #main-img {

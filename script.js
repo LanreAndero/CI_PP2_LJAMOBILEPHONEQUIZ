@@ -564,6 +564,11 @@ let currentQuestionIndex = 0;
 let correctAnswers = 0;
 
 function displayQuestion(questionIndex) {
+  if (questionIndex === 0) {
+    startTime = new Date();
+  }
+
+function displayQuestion(questionIndex) {
   const currentQuestion = questions[questionIndex];
   questionText.textContent = currentQuestion.question;
   optionA.textContent = currentQuestion.options.a;
@@ -691,12 +696,22 @@ submitButton.addEventListener("click", () => {
     prevButton.style.display = "none";
     nextButton.style.display = "none";
 
+    // Calculate total time spent
+    const endTime = new Date();
+    const totalTimeInMillis = endTime - startTime;
+    const totalTimeInSeconds = totalTimeInMillis / 1000;
+
     // Calculate final score and display it
     const finalScore = (correctAnswers / questions.length) * 100;
     const totalCorrectAnswers = correctAnswers;
     finalResult.textContent = `Total Correct Answers: ${totalCorrectAnswers} / ${questions.length}\nFinal Score: ${finalScore.toFixed(2)}%`;
     finalResult.style.display = "block";
     resetButton.style.display = "block";
+
+    // Display total time spent
+    const timeSpentMessage = document.createElement("p");
+    timeSpentMessage.textContent = `Total Time Spent: ${totalTimeInSeconds.toFixed(2)} seconds`;
+    feedbackContainer.appendChild(timeSpentMessage);
 
     // Display completion message
     const completionMessage = document.getElementById("completion-message");
