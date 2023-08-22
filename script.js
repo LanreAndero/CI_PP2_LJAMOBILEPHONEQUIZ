@@ -551,6 +551,8 @@ const questions = [
 
 ];
 
+let startTime;
+
 const answeredQuestions = [];
 const questionText = document.getElementById("question-text");
 const optionA = document.getElementById("option-a");
@@ -562,8 +564,6 @@ const feedbackContainer = document.getElementById("feedback-container");
 
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
-
-let startTime;
 
 function displayQuestion(questionIndex) {
   if (questionIndex === 0) {
