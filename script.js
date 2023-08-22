@@ -567,11 +567,8 @@ let correctAnswers = 0;
 
 function displayQuestion(questionIndex) {
   if (questionIndex === 0) {
-    startTime = new Date();
-  }
-}
-
-function displayQuestion(questionIndex) {
+        startTime = new Date();
+  }  
   const currentQuestion = questions[questionIndex];
   questionText.textContent = currentQuestion.question;
   optionA.textContent = currentQuestion.options.a;
