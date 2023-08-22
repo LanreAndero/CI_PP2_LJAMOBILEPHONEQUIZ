@@ -48,7 +48,7 @@ main {
 }
 
 #feedback-container {
-    margin-top: 2rem;
+    margin-top: 1rem;
     padding: 1rem;
     border: 1px solid #ddd;
     color: green;
@@ -100,9 +100,16 @@ main {
     background-color: #d32f2f;
 }
 
+#final-result {
+    color: red;
+}
+
+#completion-message {
+    color: #078b33;
+}
+
 .main-img-container {
     text-align: center;
-    margin-top: 1rem;
 }
 
 #main-img {
