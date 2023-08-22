@@ -590,3 +590,49 @@ function showFeedback(isCorrect, message) {
     feedbackContainer.style.color = "orange";
   }
 }
+
+const prevButton = document.getElementById("prev-button");
+const nextButton = document.getElementById("next-button");
+const finalResult = document.getElementById("final-result");
+
+function updateNavigationButtons() {
+  prevButton.disabled = currentQuestionIndex === 0;
+  nextButton.disabled = currentQuestionIndex === questions.length - 1;
+}
+
+prevButton.addEventListener("click", () => {
+  if (currentQuestionIndex > 0) {
+    currentQuestionIndex--;
+    displayQuestion(currentQuestionIndex);
+    updateNavigationButtons();
+  }
+});
+
+nextButton.addEventListener("click", () => {
+  if (currentQuestionIndex < questions.length - 1) {
+    currentQuestionIndex++;
+    displayQuestion(currentQuestionIndex);
+    updateNavigationButtons();
+  }
+});
+
+const resetButton = document.getElementById("reset-button");
+
+resetButton.addEventListener("click", () => {
+  // Reset variables and UI elements
+  currentQuestionIndex = 0;
+  correctAnswers = 0;
+  finalResult.style.display = "none";
+  questionText.style.display = "block";
+  optionA.style.display = "block";
+  optionB.style.display = "block";
+  optionC.style.display = "block";
+  optionD.style.display = "block";
+  submitButton.style.display = "block";
+  feedbackContainer.style.display = "block";
+  prevButton.style.display = "inline-block";
+  nextButton.style.display = "inline-block";
+  resetButton.style.display = "none";
+  displayQuestion(currentQuestionIndex);
+  updateNavigationButtons();
+});
