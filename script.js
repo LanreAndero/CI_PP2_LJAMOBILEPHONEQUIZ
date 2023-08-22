@@ -550,3 +550,43 @@ const questions = [
     },
 
 ];
+
+const answeredQuestions = [];
+const questionText = document.getElementById("question-text");
+const optionA = document.getElementById("option-a");
+const optionB = document.getElementById("option-b");
+const optionC = document.getElementById("option-c");
+const optionD = document.getElementById("option-d");
+const submitButton = document.getElementById("submit-button");
+const feedbackContainer = document.getElementById("feedback-container");
+
+let currentQuestionIndex = 0;
+let correctAnswers = 0;
+
+function displayQuestion(questionIndex) {
+  const currentQuestion = questions[questionIndex];
+  questionText.textContent = currentQuestion.question;
+  optionA.textContent = currentQuestion.options.a;
+  optionB.textContent = currentQuestion.options.b;
+  optionC.textContent = currentQuestion.options.c;
+  optionD.textContent = currentQuestion.options.d;
+
+  // Reset colors
+  optionA.style.color = "initial";
+  optionB.style.color = "initial";
+  optionC.style.color = "initial";
+  optionD.style.color = "initial";
+}
+
+function showFeedback(isCorrect, message) {
+  if (isCorrect) {
+    feedbackContainer.textContent = "Correct!";
+    feedbackContainer.style.color = "green";
+  } else if (!isCorrect && message) {
+    feedbackContainer.textContent = message;
+    feedbackContainer.style.color = "red";
+  } else {
+    feedbackContainer.textContent = "You have already answered this question.";
+    feedbackContainer.style.color = "orange";
+  }
+}
