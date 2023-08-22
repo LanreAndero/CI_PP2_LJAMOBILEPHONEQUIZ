@@ -591,7 +591,8 @@ function showFeedback(isCorrect, message) {
     feedbackContainer.textContent = message;
     feedbackContainer.style.color = "red";
   } else {
-    feedbackContainer.textContent = "Incorrect answer. Please try again.";
+    const currentQuestion = questions[currentQuestionIndex];
+    feedbackContainer.textContent = `Incorrect answer. The correct answer is: ${currentQuestion.options[currentQuestion.correctAnswer]}`;
     feedbackContainer.style.color = "red";
   }
 }
