@@ -513,7 +513,7 @@ const questions = [
         c: "TuneDetect",
         d: "SongFind"
       },
-      correctAnswer: "c"
+      correctAnswer: "b"
     },
 
     {
@@ -563,6 +563,8 @@ const feedbackContainer = document.getElementById("feedback-container");
 let currentQuestionIndex = 0;
 let correctAnswers = 0;
 
+let startTime;
+
 function displayQuestion(questionIndex) {
   if (questionIndex === 0) {
     startTime = new Date();
@@ -588,12 +590,12 @@ function showFeedback(isCorrect, message) {
   if (isCorrect) {
     feedbackContainer.textContent = "Correct!";
     feedbackContainer.style.color = "green";
-  } else if (!isCorrect && message) {
+  } else if (message) {
     feedbackContainer.textContent = message;
     feedbackContainer.style.color = "red";
   } else {
-    feedbackContainer.textContent = "You have already answered this question.";
-    feedbackContainer.style.color = "orange";
+    feedbackContainer.textContent = "Incorrect answer. Please try again.";
+    feedbackContainer.style.color = "red";
   }
 }
 
@@ -657,7 +659,7 @@ submitButton.addEventListener("click", () => {
 
   // Check if the question has already been answered
   if (answeredQuestions.includes(currentQuestionIndex)) {
-    showFeedback(false);
+      showFeedback(false, "You have already answered this question.");
     return;
   }
 
@@ -684,8 +686,15 @@ submitButton.addEventListener("click", () => {
     optionD.style.color = isCorrect ? "green" : "red";
   }
 
+  // Increment the question index
   currentQuestionIndex++;
+
   if (currentQuestionIndex >= questions.length) {
+    // Calculate total time spent
+    const endTime = new Date();
+    const totalTimeInMillis = endTime - startTime;
+    const totalTimeInSeconds = totalTimeInMillis / 1000;
+    
     // Hide quiz-related elements
     questionText.style.display = "none";
     optionA.style.display = "none";
@@ -697,27 +706,18 @@ submitButton.addEventListener("click", () => {
     prevButton.style.display = "none";
     nextButton.style.display = "none";
 
-    // Calculate total time spent
-    const endTime = new Date();
-    const totalTimeInMillis = endTime - startTime;
-    const totalTimeInSeconds = totalTimeInMillis / 1000;
-
     // Calculate final score and display it
     const finalScore = (correctAnswers / questions.length) * 100;
     const totalCorrectAnswers = correctAnswers;
+
+    // Display completion message with total time spent
+    const completionMessage = document.getElementById("completion-message");
+    completionMessage.textContent = `Congratulations! You have completed the quiz in ${totalTimeInSeconds.toFixed(2)} seconds.`;
+    completionMessage.style.display = "block";
+
     finalResult.textContent = `Total Correct Answers: ${totalCorrectAnswers} / ${questions.length}\nFinal Score: ${finalScore.toFixed(2)}%`;
     finalResult.style.display = "block";
     resetButton.style.display = "block";
-
-    // Display total time spent
-    const timeSpentMessage = document.createElement("p");
-    timeSpentMessage.textContent = `Total Time Spent: ${totalTimeInSeconds.toFixed(2)} seconds`;
-    feedbackContainer.appendChild(timeSpentMessage);
-
-    // Display completion message
-    const completionMessage = document.getElementById("completion-message");
-    completionMessage.textContent = "Congratulations! You have completed the quiz.";
-    completionMessage.style.display = "block";
 
     // Show reset button
     resetButton.style.display = "block";
