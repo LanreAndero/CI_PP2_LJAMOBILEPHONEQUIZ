@@ -619,6 +619,10 @@ nextButton.addEventListener("click", () => {
 const resetButton = document.getElementById("reset-button");
 
 resetButton.addEventListener("click", () => {
+  window.location.reload(); // This will refresh the web page
+});
+
+resetButton.addEventListener("click", () => {
   // Reset variables and UI elements
   currentQuestionIndex = 0;
   correctAnswers = 0;
@@ -705,7 +709,6 @@ submitButton.addEventListener("click", () => {
     displayQuestion(currentQuestionIndex);
     updateNavigationButtons();
     submitButton.disabled = false; // Enable submit button for the next question
-
   }
 
 });
