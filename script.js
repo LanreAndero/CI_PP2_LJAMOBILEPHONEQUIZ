@@ -636,3 +636,80 @@ resetButton.addEventListener("click", () => {
   displayQuestion(currentQuestionIndex);
   updateNavigationButtons();
 });
+
+submitButton.addEventListener("click", () => {
+  const selectedAnswer = document.querySelector('input[name="answer"]:checked');
+  if (!selectedAnswer) {
+    return; // No answer selected
+  }
+
+  const currentQuestion = questions[currentQuestionIndex];
+
+  // Check if the question has already been answered
+  if (answeredQuestions.includes(currentQuestionIndex)) {
+    showFeedback(false);
+    return;
+  }
+
+  // Mark the question as answered and disable the submit button
+  answeredQuestions.push(currentQuestionIndex);
+  submitButton.disabled = true;
+
+  const isCorrect = selectedAnswer.value === currentQuestion.correctAnswer;
+
+  if (isCorrect) {
+    correctAnswers++;
+  }
+
+  showFeedback(isCorrect);
+
+  // Color the selected answer
+  if (selectedAnswer.value === "a") {
+    optionA.style.color = isCorrect ? "green" : "red";
+  } else if (selectedAnswer.value === "b") {
+    optionB.style.color = isCorrect ? "green" : "red";
+  } else if (selectedAnswer.value === "c") {
+    optionC.style.color = isCorrect ? "green" : "red";
+  } else if (selectedAnswer.value === "d") {
+    optionD.style.color = isCorrect ? "green" : "red";
+  }
+
+  currentQuestionIndex++;
+  if (currentQuestionIndex >= questions.length) {
+    // Hide quiz-related elements
+    questionText.style.display = "none";
+    optionA.style.display = "none";
+    optionB.style.display = "none";
+    optionC.style.display = "none";
+    optionD.style.display = "none";
+    submitButton.style.display = "none";
+    feedbackContainer.style.display = "none";
+    prevButton.style.display = "none";
+    nextButton.style.display = "none";
+
+    // Calculate final score and display it
+    const finalScore = (correctAnswers / questions.length) * 100;
+    const totalCorrectAnswers = correctAnswers;
+    finalResult.textContent = `Total Correct Answers: ${totalCorrectAnswers} / ${questions.length}\nFinal Score: ${finalScore.toFixed(2)}%`;
+    finalResult.style.display = "block";
+    resetButton.style.display = "block";
+
+    // Display completion message
+    const completionMessage = document.getElementById("completion-message");
+    completionMessage.textContent = "Congratulations! You have completed the quiz.";
+    completionMessage.style.display = "block";
+
+    // Show reset button
+    resetButton.style.display = "block";
+  } else {
+    displayQuestion(currentQuestionIndex);
+    updateNavigationButtons();
+    submitButton.disabled = false; // Enable submit button for the next question
+
+  }
+
+});
+
+// Initialize the quiz
+displayQuestion(currentQuestionIndex);
+updateNavigationButtons();
