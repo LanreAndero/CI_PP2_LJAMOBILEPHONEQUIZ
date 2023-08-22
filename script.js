@@ -567,6 +567,7 @@ function displayQuestion(questionIndex) {
   if (questionIndex === 0) {
     startTime = new Date();
   }
+}
 
 function displayQuestion(questionIndex) {
   const currentQuestion = questions[questionIndex];
