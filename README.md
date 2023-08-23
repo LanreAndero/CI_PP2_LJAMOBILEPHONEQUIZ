@@ -220,7 +220,7 @@ I have been mindful during coding to ensure that the website is as accessible fr
 3. Providing information for screen readers where there are icons used and no text
    & footer icons.
 4. Ensuring that there is a sufficient colour contrast throughout the site.
-5. Ensuring menus are accessible by marking the current page as current for screen
+5. Ensuring buttons and funtions are accessible by marking the landing page as current for screen
    readers.
 
 ## Technologies Used
