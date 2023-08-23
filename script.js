@@ -1,229 +1,226 @@
 // Quiz Variables
-if (condition) {
-  const questions = [
+const questions = [
     {
-      question: "Question 1: Which company is credited with inventing the first mobile phone?",
-      options: {
-        a: "Nokia",
-        b: "Motorola",
-        c: "Apple",
-        d: "Samsung"
-      },
-      correctAnswer: "b"
+        question: "Question 1: Which company is credited with inventing the first mobile phone?",
+        options: {
+            a: "Nokia",
+            b: "Motorola",
+            c: "Apple",
+            d: "Samsung"
+        },
+        correctAnswer: "b"
     },
 
     {
-      question: "Question 2: What does 'SMS' stand for in mobile technology?",
-      options: {
-        a: "Short Mobile Service",
-        b: "Simple Messaging System",
-        c: "Short Message Service",
-        d: "System Message Service"
-      },
-      correctAnswer: "c"
+        question: "Question 2: What does 'SMS' stand for in mobile technology?",
+        options: {
+            a: "Short Mobile Service",
+            b: "Simple Messaging System",
+            c: "Short Message Service",
+            d: "System Message Service"
+        },
+        correctAnswer: "c"
     },
 
     {
-      question: "Question 3: Which mobile phone component converts sound into electrical signals and vice versa?",
-      options: {
-        a: "GPS",
-        b: "Camera",
-        c: "Speaker",
-        d: "Microphone"
-      },
-      correctAnswer: "d"
+        question: "Question 3: Which mobile phone component converts sound into electrical signals and vice versa?",
+        options: {
+            a: "GPS",
+            b: "Camera",
+            c: "Speaker",
+            d: "Microphone"
+        },
+        correctAnswer: "d"
     },
 
     {
-      question: "Question 4: What is the purpose of a mobile phone's 'Airplane Mode'?",
-      options: {
-        a: "Disable wireless communication",
-        b: "Enhance battery life",
-        c: "Enable Wi-Fi calling",
-        d: "Activate Bluetooth"
-      },
-      correctAnswer: "a"
+        question: "Question 4: What is the purpose of a mobile phone's 'Airplane Mode'?",
+        options: {
+            a: "Disable wireless communication",
+            b: "Enhance battery life",
+            c: "Enable Wi-Fi calling",
+            d: "Activate Bluetooth"
+        },
+        correctAnswer: "a"
     },
 
     {
-      question: "Question 5: What is the term for a mobile phone's unique numerical identifier used by cellular networks?",
-      options: {
-        a: "IP Address",
-        b: "MAC Address",
-        c: "IMEI Number",
-        d: "SIM Card"
-      },
-      correctAnswer: "c"
+        question: "Question 5: What is the term for a mobile phone's unique numerical identifier used by cellular networks?",
+        options: {
+            a: "IP Address",
+            b: "MAC Address",
+            c: "IMEI Number",
+            d: "SIM Card"
+        },
+        correctAnswer: "c"
     },
 
     {
-      question: "Question 6: Which mobile operating system is known for its open-source nature?",
-      options: {
-        a: "IOS",
-        b: "Android",
-        c: "Windows Phone",
-        d: "BlackBerry OS"
-      },
-      correctAnswer: "b"
+        question: "Question 6: Which mobile operating system is known for its open-source nature?",
+        options: {
+            a: "IOS",
+            b: "Android",
+            c: "Windows Phone",
+            d: "BlackBerry OS"
+        },
+        correctAnswer: "b"
     },
 
     {
-      question: "Question 7: What is the purpose of a mobile phone's 'Do Not Disturb' mode?",
-      options: {
-        a: "Activate voice assistant",
-        b: "Dim the screen",
-        c: "Boost network signal",
-        d: "Restrict incoming calls"
-      },
-      correctAnswer: "d"
+        question: "Question 7: What is the purpose of a mobile phone's 'Do Not Disturb' mode?",
+        options: {
+            a: "Activate voice assistant",
+            b: "Dim the screen",
+            c: "Boost network signal",
+            d: "Restrict incoming calls"
+        },
+        correctAnswer: "d"
     },
 
     {
-      question: "Question 8: What technology allows wireless charging of mobile phones?",
-      options: {
-        a: "Infrared",
-        b: "Ultrasonic",
-        c: "Qi Wireless",
-        d: "NFC"
-      },
-      correctAnswer: "c"
+        question: "Question 8: What technology allows wireless charging of mobile phones?",
+        options: {
+            a: "Infrared",
+            b: "Ultrasonic",
+            c: "Qi Wireless",
+            d: "NFC"
+        },
+        correctAnswer: "c"
     },
 
     {
-      question: "Question 9: Which mobile phone feature allows you to unlock your device using your fingerprint?",
-      options: {
-        a: "Facial Recognition",
-        b: "Touch ID",
-        c: "Voice Command",
-        d: "Iris Scanner"
-      },
-      correctAnswer: "b"
-    },
-          
-    {
-      question: "Question 10: Which mobile phone feature allows you to determine your phone's location on a map?",
-      options: {
-        a: "Geotagging",
-        b: "Geofencing",
-        c: "Geolocation",
-        d: "GPS"
-      },
-      correctAnswer: "d"
-    },
-  
-    {
-      question: "Question 11: Which mobile phone brand introduced the concept of a 'modular' phone design?",
-      options: {
-        a: "LG",
-        b: "Motorola",
-        c: "HTC",
-        d: "Sony"
-      },
-      correctAnswer: "a"
+        question: "Question 9: Which mobile phone feature allows you to unlock your device using your fingerprint?",
+        options: {
+            a: "Facial Recognition",
+            b: "Touch ID",
+            c: "Voice Command",
+            d: "Iris Scanner"
+        },
+        correctAnswer: "b"
     },
 
     {
-      question: "Question 12: What does 'LTE' stand for in the context of mobile networks?",
-      options: {
-        a: "Long Transmission Efficiency",
-        b: "Low-Temperature Emission",
-        c: "Long-Term Evolution",
-        d: "Light-Transmission Enhancement"
-      },
-      correctAnswer: "c"
-    },
-           
-    {
-      question: "Question 13: Which mobile phone feature allows you to identify a caller before answering the call?",
-      options: {
-        a: "Caller ID",
-        b: "Speed Dial",
-        c: "Voicemail",
-        d: "Call Waiting"
-      },
-      correctAnswer: "a"
+        question: "Question 10: Which mobile phone feature allows you to determine your phone's location on a map?",
+        options: {
+            a: "Geotagging",
+            b: "Geofencing",
+            c: "Geolocation",
+            d: "GPS"
+        },
+        correctAnswer: "d"
     },
 
     {
-      question: "Question 14: What is the purpose of a mobile phone's 'Haptic Feedback'?",
-      options: {
-        a: "Provide visual notifications",
-        b: "Create vibrations for tactile feedback",
-        c: "Generate holographic displays",
-        d: "Enhance audio quality"
-      },
-      correctAnswer: "b"
+        question: "Question 11: Which mobile phone brand introduced the concept of a 'modular' phone design?",
+        options: {
+            a: "LG",
+            b: "Motorola",
+            c: "HTC",
+            d: "Sony"
+        },
+        correctAnswer: "a"
     },
 
     {
-      question: "Question 15: What does 'MMS' stand for in mobile technology?",
-      options: {
-        a: "Multimedia Messaging Service",
-        b: "Mobile Media Storage",
-        c: "Mobile Mail Service",
-        d: "Multimedia Music System"
-      },
-      correctAnswer: "a"
+        question: "Question 12: What does 'LTE' stand for in the context of mobile networks?",
+        options: {
+            a: "Long Transmission Efficiency",
+            b: "Low-Temperature Emission",
+            c: "Long-Term Evolution",
+            d: "Light-Transmission Enhancement"
+        },
+        correctAnswer: "c"
     },
 
     {
-      question: "Question 16: What is the purpose of a mobile phone's 'Silent Mode'?",
-      options: {
-        a: "Amplify incoming calls",
-        b: "Disable all notifications and sounds",
-        c: "Activate vibration for all alerts",
-        d: "Maximize speaker volume"
-      },
-      correctAnswer: "b"
+        question: "Question 13: Which mobile phone feature allows you to identify a caller before answering the call?",
+        options: {
+            a: "Caller ID",
+            b: "Speed Dial",
+            c: "Voicemail",
+            d: "Call Waiting"
+        },
+        correctAnswer: "a"
     },
 
     {
-      question: "Question 17: What does 'HDR' stand for in the context of mobile phone cameras?",
-      options: {
-        a: "High-Definition Resolution",
-        b: "Hyper-Depth Recording",
-        c: "High Dynamic Range",
-        d: "Human-Digital Rendering"
-      },
-      correctAnswer: "c"
+        question: "Question 14: What is the purpose of a mobile phone's 'Haptic Feedback'?",
+        options: {
+            a: "Provide visual notifications",
+            b: "Create vibrations for tactile feedback",
+            c: "Generate holographic displays",
+            d: "Enhance audio quality"
+        },
+        correctAnswer: "b"
     },
 
     {
-      question: "Question 18: Which mobile phone feature enables you to see a preview of a message without opening it?",
-      options: {
-        a: "Quick Reply",
-        b: "Peek and Pop",
-        c: "Swipe to Archive",
-        d: "Threaded Messaging"
-      },
-      correctAnswer: "b"
+        question: "Question 15: What does 'MMS' stand for in mobile technology?",
+        options: {
+            a: "Multimedia Messaging Service",
+            b: "Mobile Media Storage",
+            c: "Mobile Mail Service",
+            d: "Multimedia Music System"
+        },
+        correctAnswer: "a"
     },
 
     {
-      question: "Question 19: What does 'AR' stand for in the context of mobile technology?",
-      options: {
-        a: "Augmented Reality",
-        b: "App Reality",
-        c: "Advanced Rendering",
-        d: "Artificial Recognition"
-      },
-      correctAnswer: "a"
+        question: "Question 16: What is the purpose of a mobile phone's 'Silent Mode'?",
+        options: {
+            a: "Amplify incoming calls",
+            b: "Disable all notifications and sounds",
+            c: "Activate vibration for all alerts",
+            d: "Maximize speaker volume"
+        },
+        correctAnswer: "b"
     },
-    
-    {
-      question: "Question 20: What is the primary purpose of a mobile phone's 'Proximity Sensor'?",
-      options: {
-        a: "Measure ambient temperature",
-        b: "Detect screen touches",
-        c: "Adjust screen brightness based on lighting conditions",
-        d: "Disable touch input when the phone is held to the ear during a call"
-      },
-      correctAnswer: "d"
-    },
-  
-  ];
 
-}
+    {
+        question: "Question 17: What does 'HDR' stand for in the context of mobile phone cameras?",
+        options: {
+            a: "High-Definition Resolution",
+            b: "Hyper-Depth Recording",
+            c: "High Dynamic Range",
+            d: "Human-Digital Rendering"
+        },
+        correctAnswer: "c"
+    },
+
+    {
+        question: "Question 18: Which mobile phone feature enables you to see a preview of a message without opening it?",
+        options: {
+            a: "Quick Reply",
+            b: "Peek and Pop",
+            c: "Swipe to Archive",
+            d: "Threaded Messaging"
+        },
+        correctAnswer: "b"
+    },
+
+    {
+        question: "Question 19: What does 'AR' stand for in the context of mobile technology?",
+        options: {
+            a: "Augmented Reality",
+            b: "App Reality",
+            c: "Advanced Rendering",
+            d: "Artificial Recognition"
+        },
+        correctAnswer: "a"
+    },
+
+    {
+        question: "Question 20: What is the primary purpose of a mobile phone's 'Proximity Sensor'?",
+        options: {
+            a: "Measure ambient temperature",
+            b: "Detect screen touches",
+            c: "Adjust screen brightness based on lighting conditions",
+            d: "Disable touch input when the phone is held to the ear during a call"
+        },
+        correctAnswer: "d"
+    },
+
+];
 
 let startTime;
 
