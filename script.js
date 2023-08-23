@@ -631,7 +631,8 @@ function rstButton() {
 function confirm() {
   const selectedAnswer = document.querySelector('input[name="answer"]:checked');
   if (!selectedAnswer) {
-    showFeedback(false, "You have to answer this question to continue.");
+    feedbackContainer.textContent = "You have to answer this question to continue.";
+    feedbackContainer.style.color = "red";
     return; // No answer selected
   }
 
