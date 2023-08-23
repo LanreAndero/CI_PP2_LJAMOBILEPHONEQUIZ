@@ -8,66 +8,65 @@
     <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-<header>
-    <h1>LJA Mobile Phone Quiz</h1>
-</header>
-
-<!--start of main-->
-<main>
-    <div id="question-container">
-        <p id="question-text"></p>
-        <div id="answer-options">
-            <label>
-                <input type="radio" class="answer-button" name="answer" value="a">
-                <span id="option-a"></span>
-            </label>
-            <label>
-                <input type="radio" class="answer-button" name="answer" value="b">
-                <span id="option-b"></span>
-            </label>
-            <label>
-                <input type="radio" class="answer-button" name="answer" value="c">
-                <span id="option-c"></span>
-            </label>
-            <label>
-                <input type="radio" class="answer-button" name="answer" value="d">
-                <span id="option-d"></span>
-            </label>
-        </div>
-        <div id="navigation-buttons">
-            <button id="prev-button" onclick="previousButton()" disabled>Previous</button>
-            <button id="next-button" onclick="confirm()">Next</button>
-            <button id="reset-button" onclick="rstButton()">Reset</button>
-        </div>
-        <button id="skip-button" onclick="skipBtn()" disabled>Skip</button>
-    </div>
-    <div id="feedback-container"></div>
-    <div id="final-result"></div>
-    <div id="completion-message" style="display: none;">Quiz Completed!</div>
-    <div class="main-img-container">
-        <img src="/assets/images/quiz-banner.png" alt="pic" id="main-img">
-    </div>
-</main>
-<!--end of main-->
-
-<!--footer section-->
-<footer>
-    <div class="footer-container">
-        <div class="social-media">
-            <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
-            <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
-            <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
-            <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
-        </div>
-        <p id="footer-text">&copy; 2023 LJA Mobile Phone Quiz. All rights reserved.</p>
-    </div>
-</footer>
-<!--end of footer section-->
-
-<script src="/script.js"></script>
-<script src="https://kit.fontawesome.com/259bfbae79.js" crossorigin="anonymous"></script>
-
 <body>
+    <header>
+        <h1>LJA Mobile Phone Quiz</h1>
+    </header>
+
+    <!--start of main-->
+    <main>
+        <div id="question-container">
+            <p id="question-text"></p>
+            <div id="answer-options">
+                <label>
+                    <input type="radio" class="answer-button" name="answer" value="a">
+                    <span id="option-a"></span>
+                </label>
+                <label>
+                    <input type="radio" class="answer-button" name="answer" value="b">
+                    <span id="option-b"></span>
+                </label>
+                <label>
+                    <input type="radio" class="answer-button" name="answer" value="c">
+                    <span id="option-c"></span>
+                </label>
+                <label>
+                    <input type="radio" class="answer-button" name="answer" value="d">
+                    <span id="option-d"></span>
+                </label>
+            </div>
+            <div id="navigation-buttons">
+                <button id="prev-button" onclick="previousButton()" disabled>Previous</button>
+                <button id="next-button" onclick="confirm()">Next</button>
+                <button id="reset-button" onclick="rstButton()">Reset</button>
+            </div>
+            <button id="skip-button" onclick="skipBtn()" disabled>Skip</button>
+        </div>
+        <div id="feedback-container"></div>
+        <div id="final-result"></div>
+        <div id="completion-message" style="display: none;">Quiz Completed!</div>
+        <div class="main-img-container">
+            <img src="/assets/images/quiz-banner.png" alt="pic" id="main-img">
+        </div>
+    </main>
+    <!--end of main-->
+
+    <!--footer section-->
+    <footer>
+        <div class="footer-container">
+            <div class="social-media">
+                <a href="https://www.facebook.com" target="_blank"><i class="fa fa-facebook"></i></a>
+                <a href="https://www.instagram.com" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
+            <p id="footer-text">&copy; 2023 LJA Mobile Phone Quiz. All rights reserved.</p>
+        </div>
+    </footer>
+    <!--end of footer section-->
+
+    <script src="/script.js"></script>
+    <script src="https://kit.fontawesome.com/259bfbae79.js" crossorigin="anonymous"></script>
     
 </body>
 </html>
