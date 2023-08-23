@@ -35,11 +35,11 @@
             </label>
         </div>
         <div id="navigation-buttons">
-            <button id="prev-button" disabled>Previous</button>
-            <button id="next-button" disabled>Next</button>
-            <button id="reset-button">Reset</button>
+            <button id="prev-button" onclick="previousButton()" disabled>Previous</button>
+            <button id="next-button" onclick="confirm()">Next</button>
+            <button id="reset-button" onclick="rstButton()">Reset</button>
         </div>
-        <button id="submit-button">Submit</button>
+        <button id="skip-button" onclick="skipBtn()" disabled>Skip</button>
     </div>
     <div id="feedback-container"></div>
     <div id="final-result"></div>
@@ -59,7 +59,7 @@
             <a href="https://www.twitter.com" target="_blank"><i class="fa fa-twitter"></i></a>
             <a href="https://www.linkedin.com" target="_blank"><i class="fa fa-linkedin"></i></a>
         </div>
-        <p>&copy; 2023 LJA Mobile Phone Quiz. All rights reserved.</p>
+        <p id="footer-text">&copy; 2023 LJA Mobile Phone Quiz. All rights reserved.</p>
     </div>
 </footer>
 <!--end of footer section-->

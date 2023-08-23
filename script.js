@@ -559,7 +559,7 @@ const optionA = document.getElementById("option-a");
 const optionB = document.getElementById("option-b");
 const optionC = document.getElementById("option-c");
 const optionD = document.getElementById("option-d");
-const submitButton = document.getElementById("submit-button");
+const submitButton = document.getElementById("next-button");
 const feedbackContainer = document.getElementById("feedback-container");
 
 let currentQuestionIndex = 0;
@@ -603,53 +603,35 @@ const finalResult = document.getElementById("final-result");
 
 function updateNavigationButtons() {
   prevButton.disabled = currentQuestionIndex === 0;
-  nextButton.disabled = currentQuestionIndex === questions.length - 1;
+  skipButton.disabled = currentQuestionIndex === questions.length - 1;
 }
 
-prevButton.addEventListener("click", () => {
+function previousButton() {
   if (currentQuestionIndex > 0) {
     currentQuestionIndex--;
     displayQuestion(currentQuestionIndex);
     updateNavigationButtons();
   }
-});
+}
 
-nextButton.addEventListener("click", () => {
+function skipBtn() {
   if (currentQuestionIndex < questions.length - 1) {
     currentQuestionIndex++;
     displayQuestion(currentQuestionIndex);
     updateNavigationButtons();
   }
-});
+}
 
 const resetButton = document.getElementById("reset-button");
 
-resetButton.addEventListener("click", () => {
+function rstButton() {
   window.location.reload(); // This will refresh the web page
-});
+}
 
-resetButton.addEventListener("click", () => {
-  // Reset variables and UI elements
-  currentQuestionIndex = 0;
-  correctAnswers = 0;
-  finalResult.style.display = "none";
-  questionText.style.display = "block";
-  optionA.style.display = "block";
-  optionB.style.display = "block";
-  optionC.style.display = "block";
-  optionD.style.display = "block";
-  submitButton.style.display = "block";
-  feedbackContainer.style.display = "block";
-  prevButton.style.display = "inline-block";
-  nextButton.style.display = "inline-block";
-  resetButton.style.display = "none";
-  displayQuestion(currentQuestionIndex);
-  updateNavigationButtons();
-});
-
-submitButton.addEventListener("click", () => {
+function confirm() {
   const selectedAnswer = document.querySelector('input[name="answer"]:checked');
   if (!selectedAnswer) {
+    showFeedback(false, "You have to answer this question to continue.");
     return; // No answer selected
   }
 
@@ -657,7 +639,7 @@ submitButton.addEventListener("click", () => {
 
   // Check if the question has already been answered
   if (answeredQuestions.includes(currentQuestionIndex)) {
-      showFeedback(false, "You have already answered this question.");
+    showFeedback(false, "You have already answered this question.");
     return;
   }
 
@@ -692,7 +674,7 @@ submitButton.addEventListener("click", () => {
     const endTime = new Date();
     const totalTimeInMillis = endTime - startTime;
     const totalTimeInSeconds = totalTimeInMillis / 1000;
-    
+
     // Hide quiz-related elements
     questionText.style.display = "none";
     optionA.style.display = "none";
@@ -702,7 +684,7 @@ submitButton.addEventListener("click", () => {
     submitButton.style.display = "none";
     feedbackContainer.style.display = "none";
     prevButton.style.display = "none";
-    nextButton.style.display = "none";
+    skipButton.style.display = "none";
 
     // Calculate final score and display it
     const finalScore = (correctAnswers / questions.length) * 100;
@@ -724,8 +706,7 @@ submitButton.addEventListener("click", () => {
     updateNavigationButtons();
     submitButton.disabled = false; // Enable submit button for the next question
   }
-
-});
+}
 
 // Initialize the quiz
 displayQuestion(currentQuestionIndex);
