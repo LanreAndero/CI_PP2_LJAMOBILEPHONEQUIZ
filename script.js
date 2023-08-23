@@ -598,7 +598,7 @@ function showFeedback(isCorrect, message) {
 }
 
 const prevButton = document.getElementById("prev-button");
-const nextButton = document.getElementById("next-button");
+const skipButton = document.getElementById("skip-button");
 const finalResult = document.getElementById("final-result");
 
 function updateNavigationButtons() {
